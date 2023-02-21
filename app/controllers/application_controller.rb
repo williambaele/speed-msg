@@ -24,5 +24,4 @@ class ApplicationController < ActionController::Base
     flash[:success] = "Signed in"
     root_path
   end
-
 end
