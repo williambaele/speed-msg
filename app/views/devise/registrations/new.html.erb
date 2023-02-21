@@ -5,19 +5,19 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="field mb-4">
           <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-full rounded-md py-1 pl-2 mt-1", placeholder:"email@speedmsg.com" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-full rounded-md py-1 pl-2 mt-1 text-gray-500", placeholder:"email@speedmsg.com" %>
         </div>
         <div class="field mb-4">
           <%= f.label :pseudo %>
-          <%= f.text_field :pseudo, autofocus: true, class:"w-full rounded-md py-1 pl-2 mt-1", placeholder:"John Doe" %>
+          <%= f.text_field :pseudo, autofocus: true, class:"w-full rounded-md py-1 pl-2 mt-1 text-gray-500", placeholder:"John Doe" %>
         </div>
         <div class="field mb-4">
           <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "new-password", class:"w-full rounded-md py-1 pl-2 mt-1", placeholder:"••••••••" %>
+          <%= f.password_field :password, autocomplete: "new-password", class:"w-full rounded-md py-1 pl-2 mt-1 text-gray-500", placeholder:"••••••••" %>
         </div>
         <div class="field mb-4">
           <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"w-full rounded-md py-1 pl-2 mt-1", placeholder:"••••••••" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"w-full rounded-md py-1 pl-2 mt-1 text-gray-500", placeholder:"••••••••" %>
         </div>
         <div class="actions">
           <%= f.submit "Sign up", class:"w-full bg-[#79F085] rounded-md my-2 py-2" %>

@@ -11,6 +11,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="relative w-full">
+      <%= render 'shared/flash'%>
+        <div class="min-h-screen">
+          <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
