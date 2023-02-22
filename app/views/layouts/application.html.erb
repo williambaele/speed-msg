@@ -9,13 +9,23 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body>
-    <div class="relative w-full">
-      <%= render 'shared/flash'%>
-        <div class="min-h-screen">
-          <%= yield %>
+  <% if user_signed_in? %>
+    <div class="flex flex-row h-full bg-[#212830] relative">
+      <aside>
+        <%= render 'shared/navbar'%>
+      </aside>
+      <div>
+        <%= render 'shared/flash'%>
+          <div class="min-h-screen">
+            <%= yield %>
+        </div>
       </div>
+    </div>
+  <% else %>
+    <%= yield %>
+  <% end %>
+  <body>
+
     </div>
   </body>
 </html>
