@@ -12,10 +12,10 @@
   <body>
   <% if user_signed_in? %>
     <div class="bg-[#212830] relative flex">
-      <aside>
+      <nav class="hidden md:block">
         <%= render 'shared/navbar'%>
-      </aside>
-      <div class="md:flex">
+      </nav>
+      <div class="w-full">
         <%= render 'shared/flash'%>
         <%= yield %>
       </div>
