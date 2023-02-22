@@ -15,13 +15,13 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_up_path_for(resource)
-    flash[:success] = "Account created and signed in"
     sign_in(resource)
+    flash[:success] = "Account created and signed in"
     root_path
   end
 
   def after_sign_in_path_for(resource)
-    flash[:success] = "Signed in"
+    flash[:success] = "Logged in"
     root_path
   end
 end
